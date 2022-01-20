@@ -90,16 +90,102 @@
                     <view key="view" contentMode="scaleToFill" id="Loz-jy-COu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about this book..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQH-FG-alC">
+                                <rect key="frame" x="8" y="96" width="398" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PBF-GQ-ddJ">
+                                <rect key="frame" x="157" y="147.5" width="100" height="97.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PBF-GQ-ddJ" secondAttribute="height" multiplier="1:1" id="8Qs-kM-Ehh"/>
+                                    <constraint firstAttribute="height" constant="100" id="SA9-ao-ew9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lOc-nE-htk">
+                                <rect key="frame" x="10" y="256" width="394" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NI-Fc-lTZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d0m-UK-CaP">
+                                        <rect key="frame" x="0.0" y="42" width="394" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Author..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2O-Jq-67C">
+                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rating..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHa-aE-0qw">
+                                                <rect key="frame" x="128.5" y="0.0" width="265.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xrb-1Q-oYb">
+                                <rect key="frame" x="10" y="342" width="394" height="471"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2j-UE-Zfu">
+                                <rect key="frame" x="10" y="821" width="394" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="FGQ-no-grr" eventType="touchUpInside" id="hUq-4t-MXU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vPl-DJ-AIY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gQH-FG-alC" firstAttribute="leading" secondItem="vPl-DJ-AIY" secondAttribute="leading" constant="8" id="3Wu-5P-9Bs"/>
+                            <constraint firstItem="vPl-DJ-AIY" firstAttribute="trailing" secondItem="lOc-nE-htk" secondAttribute="trailing" constant="10" id="6Et-0p-cVc"/>
+                            <constraint firstItem="lOc-nE-htk" firstAttribute="top" secondItem="PBF-GQ-ddJ" secondAttribute="bottom" constant="10" id="9nS-wl-oKg"/>
+                            <constraint firstItem="vPl-DJ-AIY" firstAttribute="bottom" secondItem="A2j-UE-Zfu" secondAttribute="bottom" constant="10" id="BIe-Ct-npq"/>
+                            <constraint firstItem="A2j-UE-Zfu" firstAttribute="top" secondItem="xrb-1Q-oYb" secondAttribute="bottom" constant="8" id="C2q-Q1-rxR"/>
+                            <constraint firstItem="PBF-GQ-ddJ" firstAttribute="centerX" secondItem="Loz-jy-COu" secondAttribute="centerX" id="Ffc-QS-YUr"/>
+                            <constraint firstItem="lOc-nE-htk" firstAttribute="leading" secondItem="vPl-DJ-AIY" secondAttribute="leading" constant="10" id="H6i-DT-kjX"/>
+                            <constraint firstItem="vPl-DJ-AIY" firstAttribute="trailing" secondItem="xrb-1Q-oYb" secondAttribute="trailing" constant="10" id="HYK-ji-mAa"/>
+                            <constraint firstItem="vPl-DJ-AIY" firstAttribute="trailing" secondItem="gQH-FG-alC" secondAttribute="trailing" constant="8" id="Hmv-Xk-HBc"/>
+                            <constraint firstItem="vPl-DJ-AIY" firstAttribute="trailing" secondItem="A2j-UE-Zfu" secondAttribute="trailing" constant="10" id="KSi-oO-oQz"/>
+                            <constraint firstItem="xrb-1Q-oYb" firstAttribute="top" secondItem="lOc-nE-htk" secondAttribute="bottom" constant="10" id="Mm3-7Q-bQU"/>
+                            <constraint firstItem="PBF-GQ-ddJ" firstAttribute="top" secondItem="gQH-FG-alC" secondAttribute="bottom" constant="20" id="PvI-u5-IfU"/>
+                            <constraint firstItem="gQH-FG-alC" firstAttribute="centerX" secondItem="Loz-jy-COu" secondAttribute="centerX" id="bZT-9T-0Cw"/>
+                            <constraint firstItem="A2j-UE-Zfu" firstAttribute="leading" secondItem="vPl-DJ-AIY" secondAttribute="leading" constant="10" id="tsn-lE-Sb3"/>
+                            <constraint firstItem="xrb-1Q-oYb" firstAttribute="leading" secondItem="vPl-DJ-AIY" secondAttribute="leading" constant="10" id="unh-40-iXm"/>
+                            <constraint firstItem="gQH-FG-alC" firstAttribute="top" secondItem="vPl-DJ-AIY" secondAttribute="top" constant="8" id="z9r-G8-RvI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2if-ah-a8t">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="xSK-iH-riK"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="xSK-iH-riK">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="FGQ-no-grr" id="JjF-7G-jHE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="authorTextField" destination="Y2O-Jq-67C" id="5cY-63-zfU"/>
+                        <outlet property="bookImageView" destination="PBF-GQ-ddJ" id="g8a-cr-N2t"/>
+                        <outlet property="descriptionTextView" destination="xrb-1Q-oYb" id="uvf-Mh-tk0"/>
+                        <outlet property="ratingTextField" destination="wHa-aE-0qw" id="hl2-jW-yvr"/>
+                        <outlet property="titleTextField" destination="2NI-Fc-lTZ" id="RkC-4y-bo0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vh8-10-Egi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="9"/>
+            <point key="canvasLocation" x="1328" y="9"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n5M-yP-5aT">
@@ -122,6 +208,10 @@
         <segue reference="ZK8-vV-was"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
