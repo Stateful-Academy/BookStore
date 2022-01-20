@@ -12,7 +12,11 @@
 		419B178727987EBC00423A18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419B178527987EBC00423A18 /* Main.storyboard */; };
 		419B178927987EBE00423A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419B178827987EBE00423A18 /* Assets.xcassets */; };
 		419B178C27987EBE00423A18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419B178A27987EBE00423A18 /* LaunchScreen.storyboard */; };
-		D214AE1C279A0D730043FB5A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE1B279A0D730043FB5A /* File.swift */; };
+		D214AE1C279A0D730043FB5A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE1B279A0D730043FB5A /* Book.swift */; };
+		D2A9E4E8279A127D0098F023 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A9E4E7279A127D0098F023 /* LibraryTableViewController.swift */; };
+		D2A9E4EA279A12900098F023 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A9E4E9279A12900098F023 /* BookController.swift */; };
+		D2A9E4EC279A12E20098F023 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A9E4EB279A12E20098F023 /* BookDetailViewController.swift */; };
+		D2A9E4EF279A132B0098F023 /* LibraryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A9E4EE279A132B0098F023 /* LibraryCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +27,11 @@
 		419B178827987EBE00423A18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		419B178B27987EBE00423A18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		419B178D27987EBE00423A18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D214AE1B279A0D730043FB5A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = BookStore/File.swift; sourceTree = SOURCE_ROOT; };
+		D214AE1B279A0D730043FB5A /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Book.swift; path = BookStore/Book.swift; sourceTree = SOURCE_ROOT; };
+		D2A9E4E7279A127D0098F023 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
+		D2A9E4E9279A12900098F023 /* BookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
+		D2A9E4EB279A12E20098F023 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		D2A9E4EE279A132B0098F023 /* LibraryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,8 @@
 		416F0D412798D773002D4080 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D2A9E4E5279A123B0098F023 /* Model Controller */,
+				D2A9E4E6279A12410098F023 /* View Controller */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -55,13 +65,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		416F0D442798D7CB002D4080 /* Storyboards */ = {
+		416F0D442798D7CB002D4080 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				419B178527987EBC00423A18 /* Main.storyboard */,
 				419B178A27987EBE00423A18 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		419B177327987EBC00423A18 = {
@@ -83,10 +93,9 @@
 		419B177E27987EBC00423A18 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
-				419B17AA2798D66600423A18 /* View */,
 				419B17A92798D65100423A18 /* Model */,
+				416F0D442798D7CB002D4080 /* Views */,
 				416F0D412798D773002D4080 /* Controller */,
-				416F0D442798D7CB002D4080 /* Storyboards */,
 				416F0D432798D797002D4080 /* Supporting Files */,
 			);
 			path = BookStore;
@@ -95,16 +104,35 @@
 		419B17A92798D65100423A18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D214AE1B279A0D730043FB5A /* File.swift */,
+				D214AE1B279A0D730043FB5A /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		419B17AA2798D66600423A18 /* View */ = {
+		D2A9E4E5279A123B0098F023 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D2A9E4E9279A12900098F023 /* BookController.swift */,
 			);
-			path = View;
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		D2A9E4E6279A12410098F023 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D2A9E4ED279A130A0098F023 /* Custom Cells */,
+				D2A9E4E7279A127D0098F023 /* LibraryTableViewController.swift */,
+				D2A9E4EB279A12E20098F023 /* BookDetailViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		D2A9E4ED279A130A0098F023 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2A9E4EE279A132B0098F023 /* LibraryCellTableViewCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				419B178027987EBC00423A18 /* AppDelegate.swift in Sources */,
-				D214AE1C279A0D730043FB5A /* File.swift in Sources */,
+				D2A9E4EA279A12900098F023 /* BookController.swift in Sources */,
+				D2A9E4EC279A12E20098F023 /* BookDetailViewController.swift in Sources */,
+				D2A9E4EF279A132B0098F023 /* LibraryCellTableViewCell.swift in Sources */,
+				D214AE1C279A0D730043FB5A /* Book.swift in Sources */,
+				D2A9E4E8279A127D0098F023 /* LibraryTableViewController.swift in Sources */,
 				419B178227987EBC00423A18 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
