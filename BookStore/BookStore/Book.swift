@@ -11,12 +11,16 @@ class Book {
     // MARK: - Properties
     var title: String
     var author: String
-    var rating: Int
+    var lastUpdated: Date
+    var rating: Double
+    var synopsis: String
     
     // MARK: - Memberwise Initializer
-    init(title: String, author: String, rating: Int) {
+    init(title: String, author: String, lastUpdated: Date = Date(), rating: Double, synopsis: String) {
         self.title = title
         self.author = author
+        self.lastUpdated = lastUpdated
         self.rating = rating
+        self.synopsis = synopsis
     }
 }

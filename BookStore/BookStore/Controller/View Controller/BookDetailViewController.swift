@@ -14,7 +14,7 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
     @IBOutlet weak var ratingTextField: UITextField!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var synopsisTextView: UITextView!
     @IBOutlet weak var bookImageView: UIImageView!
     
     override func viewDidLoad() {

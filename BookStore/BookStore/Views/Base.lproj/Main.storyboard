@@ -178,8 +178,8 @@
                     <connections>
                         <outlet property="authorTextField" destination="Y2O-Jq-67C" id="5cY-63-zfU"/>
                         <outlet property="bookImageView" destination="PBF-GQ-ddJ" id="g8a-cr-N2t"/>
-                        <outlet property="descriptionTextView" destination="xrb-1Q-oYb" id="uvf-Mh-tk0"/>
                         <outlet property="ratingTextField" destination="wHa-aE-0qw" id="hl2-jW-yvr"/>
+                        <outlet property="synopsisTextView" destination="xrb-1Q-oYb" id="RGM-GC-Hc9"/>
                         <outlet property="titleTextField" destination="2NI-Fc-lTZ" id="RkC-4y-bo0"/>
                     </connections>
                 </viewController>
