@@ -102,6 +102,25 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
         authorTextField.text = book.author
         ratingTextField.text = String(book.rating)
         synopsisTextView.text = book.synopsis
+        bookImageView.image = book.bookImage
+        
+        var row = 0
+        switch book.rating {
+        case 0: row = 0
+        case 0.5: row = 1
+        case 1.0: row = 2
+        case 1.5: row = 3
+        case 2.0: row = 4
+        case 2.5: row = 5
+        case 3.0: row = 6
+        case 3.5: row = 7
+        case 4.0: row = 8
+        case 4.5: row = 9
+        case 5.0: row = 10
+        default: row = 0
+        }
+
+        ratingPickerView.selectRow(row, inComponent: 0, animated: true)
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
