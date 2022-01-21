@@ -16,6 +16,8 @@ class LibraryCellTableViewCell: UITableViewCell {
     func updateViews(book: Book){
         titleLabel.text = book.title
         authorLabel.text = book.author
-        ratingLabel.text = String(book.rating)
+        var ratingString = String(book.rating)
+        ratingString.append(" / 5")
+        ratingLabel.text = ratingString
     }
 }
