@@ -149,5 +149,6 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
         ratingTextField.text = ""
         synopsisTextView.text = ""
         bookImageView.image = defaultImage
+        ratingPickerView.selectRow(0, inComponent: 0, animated: true)
     }
 }
