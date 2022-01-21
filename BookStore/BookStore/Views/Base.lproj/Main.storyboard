@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Df4-pz-2S1" customClass="LibraryCellTableViewCell" customModule="BookStore" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" id="Df4-pz-2S1" customClass="LibraryCellTableViewCell" customModule="BookStore" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Df4-pz-2S1" id="0D0-uU-UpF">
@@ -62,6 +62,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="authorLabel" destination="prJ-NR-pP5" id="frx-Al-rUr"/>
+                                    <outlet property="ratingLabel" destination="Ihx-yP-4VM" id="d0A-Au-V9x"/>
+                                    <outlet property="titleLabel" destination="jpb-c5-1U2" id="fnH-rR-iO9"/>
                                     <segue destination="FGQ-no-grr" kind="show" identifier="toDetailVC" id="0Cs-Ur-9ZV"/>
                                 </connections>
                             </tableViewCell>
@@ -133,7 +136,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xrb-1Q-oYb">
                                 <rect key="frame" x="10" y="342" width="394" height="471"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -178,6 +180,7 @@
                     <connections>
                         <outlet property="authorTextField" destination="Y2O-Jq-67C" id="5cY-63-zfU"/>
                         <outlet property="bookImageView" destination="PBF-GQ-ddJ" id="g8a-cr-N2t"/>
+                        <outlet property="clearButton" destination="A2j-UE-Zfu" id="d13-th-ZZe"/>
                         <outlet property="ratingTextField" destination="wHa-aE-0qw" id="hl2-jW-yvr"/>
                         <outlet property="synopsisTextView" destination="xrb-1Q-oYb" id="RGM-GC-Hc9"/>
                         <outlet property="titleTextField" destination="2NI-Fc-lTZ" id="RkC-4y-bo0"/>
@@ -205,7 +208,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZK8-vV-was"/>
+        <segue reference="0Cs-Ur-9ZV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>

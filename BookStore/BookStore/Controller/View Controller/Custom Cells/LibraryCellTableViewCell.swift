@@ -9,4 +9,13 @@ import UIKit
 
 class LibraryCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    func updateViews(book: Book){
+        titleLabel.text = book.title
+        authorLabel.text = book.author
+        ratingLabel.text = String(book.rating)
+    }
 }
